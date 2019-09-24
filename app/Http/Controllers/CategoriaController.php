@@ -23,7 +23,7 @@ class CategoriaController extends Controller
         $categoria->nomcat = $request->get('nomcat');
         $categoria->save();
         
-        return redirect('/categoria')->with('msg', 'Categoria cadastrada com sucesso !!!');
+        return "true";
                 
     }
      public function destroy($codcat){

@@ -8,6 +8,12 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        
+        <script src="{{url('/')}}/js/categoria.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -15,7 +21,7 @@
         <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
       <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Categoria</h3>
 
-        <form action="{{route('categoria.store')}}" method="post"style="width: 0%;padding: 10px; display: table; margin: auto">
+      <form id="formAdd" onsubmit="return adicionarCategoria('{{route('categoria.store')}}');" action="" method="post"style="width: 0%;padding: 10px; display: table; margin: auto">
             @csrf <!--para evitar envio de formularios atraves de outras pessoas ao site-->
             
             <label for='nomcat'>Nome da categoria</label><br/>
