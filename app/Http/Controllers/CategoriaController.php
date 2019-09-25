@@ -42,7 +42,7 @@ class CategoriaController extends Controller
         $categoria->nomcat = $request->get('nomcat');
         $categoria->save();
         
-        return redirect('/categoria')->with('alterada', 'Categoria alterada com sucesso !!!');
+        return true;
                 
     }
 }
